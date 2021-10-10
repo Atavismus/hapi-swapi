@@ -1,4 +1,5 @@
 import { getResources } from '../api/controllers/ResourcesController.js';
+import { getSearch } from '../api/controllers/SearchController.js';
 
 export const resources = {
   method: 'GET',
@@ -11,9 +12,14 @@ export const resources = {
 
 export const search = {
   method: 'GET',
-  path: '/api/search/{resource}/{search}',
-  handler: async (request) => {
-    return 'TODO: search';
+  path: '/api/search',
+  handler: async (request, h) => {
+    try {
+      const result = await getSearch(request.query);
+      return result;
+    } catch (error) {
+      return h.response(error.message).code(400);
+    }
   },
 };
 
