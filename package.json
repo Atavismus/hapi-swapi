@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/Atavismus/hapi-swapi#readme",
   "dependencies": {
-    "@hapi/hapi": "^20.2.1"
+    "@hapi/hapi": "^20.2.1",
+    "axios": "^0.22.0"
   },
   "type": "module"
 }
