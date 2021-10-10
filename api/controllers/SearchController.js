@@ -1,5 +1,6 @@
 import { searchService } from '../services/SearchService.js';
 import { RESOURCES } from '../../config/constants.js';
+import Hoek from '@hapi/hoek';
 
 export const getSearch = async (params) => {
   const { resource, search } = params;
@@ -10,7 +11,10 @@ export const getSearch = async (params) => {
     throw new Error('Wrong resource parameter value');
   }
   try {
-    const result = await searchService(resource, search);
+    const result = await searchService(
+      Hoek.escapeHtml(resource),
+      Hoek.escapeHtml(search)
+    );
     return result;
   } catch (error) {
     throw error;
