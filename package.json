@@ -1,0 +1,22 @@
+{
+  "name": "hapi-swapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atavismus/hapi-swapi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atavismus/hapi-swapi/issues"
+  },
+  "homepage": "https://github.com/Atavismus/hapi-swapi#readme",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.1"
+  }
+}
