@@ -1,8 +1,11 @@
+import { getResources } from '../api/controllers/ResourcesController.js';
+
 export const resources = {
   method: 'GET',
   path: '/api/resources',
-  handler: async (request) => {
-    return 'TODO: resources';
+  handler: async () => {
+    const result = await getResources();
+    return result;
   },
 };
 
