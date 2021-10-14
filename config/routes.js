@@ -13,9 +13,10 @@ export const resources = {
 };
 
 /**
- * Search by resource in name
+ * Search by resource in name (mostly)
  * @param {string} resource
  * @param {string} search
+ * @param {integer} page (optional)
  */
 export const search = {
   method: 'GET',
