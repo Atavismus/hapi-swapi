@@ -3,7 +3,7 @@ import { RESOURCES } from '../../config/constants.js';
 import Hoek from '@hapi/hoek';
 
 export const getById = async (params) => {
-  const { resource, id = '' } = params;
+  const { resource, id = '', page = '' } = params;
   if (!resource) {
     throw new Error('Missing resource parameter');
   }
@@ -24,7 +24,8 @@ export const getById = async (params) => {
   try {
     const result = await getByIdService(
       Hoek.escapeHtml(resource),
-      Hoek.escapeHtml(id)
+      Hoek.escapeHtml(id),
+      Hoek.escapeHtml(page)
     );
     return result;
   } catch (error) {

@@ -33,6 +33,7 @@ export const search = {
  * Get by id or get all if no id parameter
  * @param {string} resource
  * @param {integer} id (optional)
+ * @param {integer} page (optional)
  */
 export const get = {
   method: 'GET',
